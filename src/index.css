@@ -1,13 +1,236 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Poppins";
 }
+@media screen and (min-width: 1024px) {
+  body {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 992px) {
+  .headerComponent {
+    position: sticky;
+    top: 1vh;
+    z-index: 1;
+    height: 10vh;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  .headerComponent > img {
+    position: absolute;
+    left: 0;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .closeIconContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    margin: 2%;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+  }
+
+  .bodyComponent {
+    position: relative;
+    background-color: #eeeded;
+    height: 70vh;
+  }
+
+  .bodyIconsContainer {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0 0 5%;
+  }
+
+  .singleIcon {
+    margin-right: 1rem;
+  }
+
+  .singleIconNameTag {
+    position: absolute;
+    text-transform: capitalize;
+  }
+
+  .singleIconButton {
+    background: none;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 0.2rem;
+  }
+
+  .singleIcon::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(90, 90, 90);
+    height: 90%;
+    width: 1px;
+    margin-left: 0.3rem;
+  }
+
+  .singleIconButton:active {
+    border: 1px solid rgb(90, 90, 90);
+  }
+
+  textarea {
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 25% 5% auto 5%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    height: 60%;
+    font-size: 18px;
+  }
+
+  textarea:focus {
+    border: 2px solid rgb(90, 90, 90);
+  }
+
+  .iconButton {
+    outline: none;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    padding: 0.5rem 1rem;
+    background: rgb(90, 90, 90);
+  }
+
+  .iconList {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-left: 5%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .footerComponent {
+    height: 25vh;
+    background: rgb(90, 90, 90);
+    color: white;
+  }
+
+  .footerInputBox {
+    display: flex;
+  }
+
+  .footerInputBox input {
+    height: 1.5rem;
+    width: 10rem;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 1rem;
+    color: white;
+    font-size: 18px;
+    padding: 0.2rem;
+  }
+  .cancelSaveContainer {
+    display: flex;
+    margin: 1rem;
+  }
+
+  .editContainer {
+    margin: 1rem;
+  }
+
+  .photoTag {
+    width: 25%;
+    font-size: 20px;
+    padding: 15px 0;
+  }
+
+  .photoContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5%;
+  }
+
+  .imageUploadButton {
+    position: relative;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 5px;
+    border: 1px dashed white;
+    background: rgb(116, 115, 115);
+  }
+
+  .imageUploadButton button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: white;
+  }
+
+  .imageParentContainer {
+    position: relative;
+  }
+
+  .imageHolder {
+    border-radius: 5px;
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 1px solid white;
+  }
+
+  .imageHolder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .shiftIconContainer {
+    width: 30%;
+    margin: 0 1% 2% 0;
+    font: 20px;
+  }
+
+  .shiftIconContainer button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    font-size: 18px;
+  }
+
+  .shiftIconContainer button div {
+    align-self: center;
+    line-height: 0.1;
+  }
+
+  .deleteImageContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -50%);
+  }
+
+  .deleteImageContainer button {
+    background: none;
+    border: none;
+    border-radius: 10px;
+  }
+
+  .addPhotoTag {
+    font-size: 0.6rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 5% 10%;
+  }
 }
